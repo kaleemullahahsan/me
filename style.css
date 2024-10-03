@@ -313,6 +313,7 @@ header {
 .worktog {
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .whead {
@@ -379,6 +380,9 @@ footer{
     .skillContent{
         gap: 0px;
     }
+    .texts h1{
+        font-size: 3.3rem;
+    }
     .col2{
         grid-template-columns: 1fr;
     }
@@ -389,7 +393,7 @@ footer{
         width: auto;
     }
     .sectionstart img{
-        width: 60%;
+        width: 80%;
     }
     .sectionstart .texts{
         order: 2;
@@ -400,6 +404,7 @@ footer{
     }
     .socialSection{
         justify-content: space-between;
+        gap: 1.5rem;
     }
     .socials{
         gap: .5rem;
@@ -415,8 +420,14 @@ footer{
         display: none;
     }
     .lightbtngr{
-        font-size: 1.8rem;
+        font-size: 2rem;
         white-space: nowrap;
+    }
+    .aboutContent p{
+        font-size: 1.6rem;
+    }
+    .aboutContent .studyYear{
+        font-size: 1.8rem;
     }
     .lightbtngr svg{
         width: 8px;
