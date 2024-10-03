@@ -451,8 +451,10 @@ footer{
     }
     .aboutContent{
         flex-direction: column;
+        justify-content: center;
     }
     .skillContent{
         flex-direction: reverse-column;
+        justify-content: center;
     }
 }
