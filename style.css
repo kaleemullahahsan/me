@@ -378,8 +378,11 @@ footer{
     .navPages{
         gap: 1rem;
     }
+    .skillContent .img, .aboutContent .img{
+       width: auto;
+    }
     .skillContent img, .aboutContent img{
-        display: none;
+       width: 100%;
     }
     .skillContent{
         gap: 0px;
