@@ -382,7 +382,7 @@ footer{
        width: auto;
       justify-content: center;
     }
-    .skillContent img, .aboutContent img{
+    .aboutSection .aboutContent img, .skillsSection .skillContent img{
        width: 100%;
     }
     .skillContent{
@@ -452,8 +452,11 @@ footer{
     }
     .aboutContent{
         flex-direction: column;
+        padding: 1.5rem 0 0 0;
     }
     .skillContent{
         flex-direction: column-reverse;
+        margin: 0;
+        padding: 1.5rem 0 0 0;
     }
 }
