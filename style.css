@@ -380,6 +380,7 @@ footer{
     }
     .skillContent .img, .aboutContent .img{
        width: auto;
+      justify-content: center;
     }
     .skillContent img, .aboutContent img{
        width: 100%;
@@ -397,7 +398,7 @@ footer{
         justify-content: center;
     }
     .sectionstart .img{
-        width: auto;
+        width: -webkit-fill-available;
     }
     .sectionstart img{
         width: 80%;
@@ -451,10 +452,8 @@ footer{
     }
     .aboutContent{
         flex-direction: column;
-        justify-content: center;
     }
     .skillContent{
         flex-direction: column-reverse;
-        justify-content: center;
     }
 }
