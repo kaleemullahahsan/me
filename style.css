@@ -449,10 +449,10 @@ footer{
     .aboutSection, .skillsSection{
         padding: 1.5rem;
     }
-    .aboutSection{
+    .aboutContent{
         flex-direction: column;
     }
-    .skillsSection{
+    .skillContent{
         flex-direction: reverse-column;
     }
 }
