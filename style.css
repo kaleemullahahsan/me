@@ -407,7 +407,7 @@ footer{
         align-items: center;
     }
     .socialSection{
-        justify-content: space-between;
+        justify-content: center;
         gap: 1.5rem;
     }
     .socials{
@@ -443,7 +443,7 @@ footer{
     .heroSection{
         padding: 0 1.5rem;
     }
-    .aboutSection, .skillsSection, .socialSection{
+    .aboutSection, .skillsSection{
         padding: 1.5rem;
     }
 }
