@@ -436,4 +436,10 @@ footer{
     .skillContent .flexCol p{
         font-size: 1.6rem;
     }
+    .heroSection{
+        padding: 0 1.5rem;
+    }
+    .aboutSection, .skillsSection{
+        padding: 1.5rem;
+    }
 }
