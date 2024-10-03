@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
-    <header class="dFlex">
+    <header class="dFlex" data-aos="fade-down">
         <div class="navPages dFlex">
             <a href="index.html" class="activea"> <i class="fa-solid fa-house activenav"></i></a>
             <a href="projects.html"> <i class="fa-regular fa-images"></i></a>
@@ -23,7 +24,7 @@
             Hire Me
         </a>
     </header>
-    <div class="mainContainer ">
+    <div class="mainContainer" data-aos="fade-up">
         <section class="heroSection">
             <div class="dFlex hireHeader">
                 <div class="lightbtngr dFlex">
@@ -65,7 +66,7 @@
                 </div>
             </div>
         </section>
-        <section class="aboutSection flexCol">
+        <section class="aboutSection flexCol" data-aos="fade-up">
             <div class="dFlex hireHeader">
                 <div class="lightbtngr dFlex">
                     <svg width="13px" height="13px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,7 +93,7 @@
                 </div>
             </div>
         </section>
-        <section class="skillsSection flexCol">
+        <section class="skillsSection flexCol " data-aos="fade-up">
             <div class="dFlex hireHeader">
                 <div class="lightbtngr dFlex">
                     <svg width="13px" height="13px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -148,7 +149,7 @@
 
             </div>
         </section>
-        <section class="worktog flexCol">
+        <section class="worktog flexCol  data-aos="fade-up"">
             <p class="whead">Let’s work together.</p>
             <p>Creating user experience and visual appealing design</p>
             <div class="twobtns dFlex">
@@ -167,7 +168,7 @@
             </div>
         </section>
         <footer class="flexCol">
-            <div class="socialSection dFlex">
+            <div class="socialSection dFlex " data-aos="fade-up">
                 <div class="lightbtngr dFlex">
                     <svg width="13px" height="13px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="8" cy="8" r="8" fill="#8080805e" />
@@ -181,13 +182,19 @@
                     <a href=""><i class="fa-brands fa-github"></i></a>
                 </div>
             </div>
-            <div class="copyright flexCol">
+            <div class="copyright flexCol" data-aos="fade-up">
                 <p style="color: white; font-size: 1.8rem;">© 2024 Kaleemullah</p>
                 <p style="font-size: 1.5rem;">- Front-End Developer -</p>
             </div>
         </footer>
     </div>
     <script src="jquery.js"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        duration: 1000,
+    });
+  </script>
 </body>
 
 </html>
