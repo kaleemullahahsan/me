@@ -385,9 +385,6 @@ footer{
     .aboutSection .aboutContent img, .skillsSection .skillContent img{
        width: 100%;
     }
-    .skillContent{
-        gap: 0px;
-    }
     .texts h1{
         font-size: 3.3rem;
     }
