@@ -432,5 +432,8 @@ footer{
     .lightbtngr svg{
         width: 8px;
         height: 8px;
-    }   
+    }
+    .skillContent .flexCol p{
+        font-size: 1.6rem;
+    }
 }
