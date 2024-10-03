@@ -85,7 +85,7 @@ header {
 .navPages a:hover {
     background-color: #2c2c2c;
 }
-.navPages a:hover .navPages i{
+.navPages a:hover i{
     color: rgba(255, 255, 255, 0.733);
 }
 .btngroup {
