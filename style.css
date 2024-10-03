@@ -443,7 +443,7 @@ footer{
     .heroSection{
         padding: 0 1.5rem;
     }
-    .aboutSection, .skillsSection{
+    .aboutSection, .skillsSection, .socialSection{
         padding: 1.5rem;
     }
 }
