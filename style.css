@@ -452,11 +452,11 @@ footer{
     }
     .aboutContent{
         flex-direction: column;
-        padding: 1.5rem 0 0 0;
+        padding: 1.5rem 0 0 0 !important;
     }
     .skillContent{
         flex-direction: column-reverse;
         margin: 0;
-        padding: 1.5rem 0 0 0;
+        padding: 1.5rem 0 0 0 !important;
     }
 }
