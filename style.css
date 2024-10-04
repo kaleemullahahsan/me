@@ -147,7 +147,7 @@ header {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.heroSection h1 {
+.heroSection h1, .contactSection h1 {
     font-size: 4rem;
     color: white;
 }
@@ -362,6 +362,47 @@ footer{
     align-items: center;
 }
 
+
+.contactSection{
+    padding: 0 2.5rem;
+}
+
+.contactSection .form{
+    gap: 1.5rem;
+}
+.contactSection .form input{
+    border: none;
+    width: 50%;
+    outline: none;
+    background-color: #2c2c2c;
+    font-family: "Saira Semi Condensed", sans-serif;
+    padding: 1.6rem;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.6rem;
+}
+.form textarea{
+    font-size: 1.6rem;
+    border: none;
+    outline: none;
+    background-color: #2c2c2c;
+    color: white;
+    font-family: "Saira Semi Condensed", sans-serif;
+    border-radius: 12px;
+    padding: 1.6rem;
+    resize: none;
+}
+.submit{
+    border: none;
+    outline: none;
+    background-color: #2c2c2c;
+    font-family: "Saira Semi Condensed", sans-serif;
+    padding: 1.6rem;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.6rem;
+    text-align: center;
+}
 @media (max-width:1049px) {
     .skillContent .flexCol{
         width: 100%;
