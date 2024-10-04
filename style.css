@@ -412,6 +412,9 @@ footer{
     }
 }
 @media (max-width:860px) {
+    body{
+        padding: 1rem !important;
+    }
     header{
         padding: 1rem;
     }
@@ -481,7 +484,7 @@ footer{
     .skillContent .flexCol p{
         font-size: 1.6rem;
     }
-    .heroSection{
+    .heroSection, .contactSection{
         padding: 0 1.5rem;
     }
     .aboutSection, .skillsSection{
