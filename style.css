@@ -380,6 +380,7 @@ footer{
     border-radius: 12px;
     color: white;
     font-size: 1.6rem;
+    transition: all .2s ease-in-out;
 }
 .form textarea{
     font-size: 1.6rem;
@@ -391,8 +392,13 @@ footer{
     border-radius: 12px;
     padding: 1.6rem;
     resize: none;
+    transition: all .2s ease-in-out;
+}
+.form input:focus, .form textarea:focus{
+    border: 1px solid lightgrey;
 }
 .submit{
+    cursor: pointer;
     border: none;
     outline: none;
     background-color: #2c2c2c;
@@ -498,5 +504,22 @@ footer{
         flex-direction: column-reverse;
         margin: 0;
         padding: 1.5rem 0 0 0 !important;
+    }
+    .form .dFlex{
+        flex-direction: column;
+    }
+    .form .dFlex input{
+        width: 100%;
+    }
+    .contactSection .sectionstart{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .contactSection .sectionstart .texts{
+        align-items: start;
+        text-align: left;
+    }
+    .contactSection .sectionstart .texts .twobtns{
+        display: none;
     }
 }
