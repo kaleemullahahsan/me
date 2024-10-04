@@ -409,6 +409,24 @@ footer{
     font-size: 1.6rem;
     text-align: center;
 }
+.whatsapp-contact {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-contact i {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-contact i:hover {
+  transform: scale(1.1);
+}
 @media (max-width:1049px) {
     .skillContent .flexCol{
         width: 100%;
