@@ -1,41 +1,115 @@
-$(document).ready(function(){
-    $('.copyBtn').on('click', function() {
-        var email = 'kaleemullahahsan0@gmail.com';
+  $(document).ready(function(){
+      var textArray = ['Front-End Developer', 'Creative Coder', 'Web Designer'];
+      var currentIndex = 0;
+      var currentChar = 0;
+      var isDeleting = false;
+      var typingSpeed = 100; // Typing speed in milliseconds
 
-        // Create a temporary input element
-        var tempInput = $('<input>');
-        $('body').append(tempInput);
-        tempInput.val(email).select();
+      function typeText() {
+          // Select the current text
+          var currentText = textArray[currentIndex];
 
-        // Copy the email to clipboard
-        document.execCommand('copy');
+          // Update the visible part of the text
+          $('#type-it').text(currentText.substring(0, currentChar));
 
-        // Remove the temporary input element
-        tempInput.remove();
+          // Adjust typing speed for the next frame
+          var speed = typingSpeed;
 
-        // Change button text to 'Copied' while keeping the SVG intact
-        $(this).html(`
-            <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M10 8V7C10 6.05719 10 5.58579 10.2929 5.29289C10.5858 5 11.0572 5 12 5H17C17.9428 5 18.4142 5 18.7071 5.29289C19 5.58579 19 6.05719 19 7V12C19 12.9428 19 13.4142 18.7071 13.7071C18.4142 14 17.9428 14 17 14H16M7 19H12C12.9428 19 13.4142 19 13.7071 18.7071C14 18.4142 14 17.9428 14 17V12C14 11.0572 14 10.5858 13.7071 10.2929C13.4142 10 12.9428 10 12 10H7C6.05719 10 5.58579 10 5.29289 10.2929C5 10.5858 5 11.0572 5 12V17C5 17.9428 5 18.4142 5.29289 18.7071C5.58579 19 6.05719 19 7 19Z"
-                    stroke="#464455" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            Copied
-        `);
+          if (isDeleting) {
+              speed /= 2; // Speed up deletion
+          }
 
-        // Optional: Reset the text and SVG back to 'Copy Email' after 2 seconds
-        var button = $(this);
-        setTimeout(function(){
-            button.html(`
-                <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M10 8V7C10 6.05719 10 5.58579 10.2929 5.29289C10.5858 5 11.0572 5 12 5H17C17.9428 5 18.4142 5 18.7071 5.29289C19 5.58579 19 6.05719 19 7V12C19 12.9428 19 13.4142 18.7071 13.7071C18.4142 14 17.9428 14 17 14H16M7 19H12C12.9428 19 13.4142 19 13.7071 18.7071C14 18.4142 14 17.9428 14 17V12C14 11.0572 14 10.5858 13.7071 10.2929C13.4142 10 12.9428 10 12 10H7C6.05719 10 5.58579 10 5.29289 10.2929C5 10.5858 5 11.0572 5 12V17C5 17.9428 5 18.4142 5.29289 18.7071C5.58579 19 6.05719 19 7 19Z"
-                        stroke="#464455" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                Copy Email
-            `);
-        }, 2000);
+          // Typing or Deleting logic
+          if (!isDeleting && currentChar < currentText.length) {
+              currentChar++;
+          } else if (isDeleting && currentChar > 0) {
+              currentChar--;
+          } else {
+              // Change the direction (start deleting or typing the next string)
+              if (!isDeleting) {
+                  speed = 2000; // Pause at the end of typing
+                  isDeleting = true;
+              } else {
+                  isDeleting = false;
+                  currentIndex = (currentIndex + 1) % textArray.length; // Cycle through the textArray
+              }
+          }
+
+          // Continue typing/deleting
+          setTimeout(typeText, speed);
+      }
+
+      // Start typing
+      typeText();
+  });
+
+  $(document).ready(function(){
+    var owl = $(".owl-carousel");
+
+    // Initialize the Owl Carousel
+    owl.owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true, 
+        loop: true,
+        margin: 24,
+        nav: false, // Enable navigation buttons (previous/next)
+        dots: true, // Enable dots
+        responsive: {
+            0: {
+                items: 1 // 1 slide on mobile devices
+            },
+            768: {
+                items: 2 // 2 slides on tablets
+            },
+            1024: {
+                items: 3 // 3 slides on desktops
+            }
+        }
+    });
+
+    // Custom dot styling (Optional: Can modify in CSS instead)
+    $(".owl-dot").each(function(index) {
+        $(this).html("<span></span>"); // Add span inside each dot for styling
+    });
+});
+
+
+$(document).ready(function() {
+    // Flag to check if the counter has been animated
+    let counterAnimated = false;
+
+    // Function to animate the counter
+    function animateCounters() {
+        if (!counterAnimated) {
+            $('.a-count').each(function() {
+                const $count = $(this).find('.count');
+                const endCount = $(this).data('count');
+                let currentCount = 0;
+
+                // Animate the count
+                const interval = setInterval(function() {
+                    if (currentCount < endCount) {
+                        currentCount++;
+                        $count.text(currentCount.toLocaleString()); // Add comma for thousands
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 1); // Adjust speed by changing the interval time (ms)
+            });
+            counterAnimated = true; // Prevent re-animation
+        }
+    }
+
+    // Scroll event
+    $(window).scroll(function() {
+        const offset = $('.row').offset().top; // Get the offset of the row
+        const windowScroll = $(window).scrollTop() + $(window).height(); // Current scroll position
+
+        // Check if the user has scrolled to the divs
+        if (windowScroll > offset) {
+            animateCounters();
+            $(window).off('scroll'); // Unbind the scroll event
+        }
     });
 });
