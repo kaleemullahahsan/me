@@ -122,17 +122,22 @@ html {
         }
         @keyframes wave {
           0% { transform: rotate(0deg); }
-          25% { transform: rotate(15deg); }
-          50% { transform: rotate(0deg); }
-          75% { transform: rotate(-15deg); }
+          10% { transform: rotate(14deg); }
+          20% { transform: rotate(-8deg); }
+          30% { transform: rotate(14deg); }
+          40% { transform: rotate(-4deg); }
+          50% { transform: rotate(10deg); }
+          60% { transform: rotate(0deg); }
           100% { transform: rotate(0deg); }
         }
         
         .wave-emoji {
+          margin-right:5px;
           display: inline-block;
-          animation: wave 1.5s infinite ease-in-out;
-          transform-origin: bottom center; /* Rotate around the bottom of the emoji */
+          animation: wave 2s infinite ease-in-out;
+          transform-origin: 70% 70%; /* Adjusted origin to look more natural */
         }
+
 
     </style>
     <style id="global-styles-inline-css" type="text/css">
