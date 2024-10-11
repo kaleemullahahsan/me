@@ -120,6 +120,20 @@ html {
         .projects-Counter, .services-section{
             overflow: hidden !important;
         }
+        @keyframes wave {
+          0% { transform: rotate(0deg); }
+          25% { transform: rotate(15deg); }
+          50% { transform: rotate(0deg); }
+          75% { transform: rotate(-15deg); }
+          100% { transform: rotate(0deg); }
+        }
+        
+        .wave-emoji {
+          display: inline-block;
+          animation: wave 1.5s infinite ease-in-out;
+          transform-origin: bottom center; /* Rotate around the bottom of the emoji */
+        }
+
     </style>
     <style id="global-styles-inline-css" type="text/css">
         :root {
@@ -506,8 +520,7 @@ html {
                 <div class="row align-items-center min-vh-100 flex-row-reverse">
                     <div class="col-lg-6 ps-xl-5 mb-5 mb-lg-0">
                         <div class="home-intro">
-                            <h6><img draggable="false" role="img" class="emoji" alt="👋"
-                                    src="https://s.w.org/images/core/emoji/15.0.3/svg/1f44b.svg"> Hi, I’ m</h6>
+                            <h6><img draggable="false" role="img" class="emoji wave-emoji" alt="👋" src="https://s.w.org/images/core/emoji/15.0.3/svg/1f44b.svg">Hi, I’ m</h6>
                             <h1>Kaleemullah</h1>
                             <h2>I'm a <span id="type-it"></span><span class="cursor">|</span></h2>
                             <p class="pe-lg-5">We work with professionals and leaders who want to build careers that
