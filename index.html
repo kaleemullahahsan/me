@@ -52,23 +52,23 @@
         }
    /* Dark Theme Variables */
 [data-bs-theme=dark] {
-    --px-theme: #4b3f3f !important; /* Warm brown for a cohesive and earthy feel */
-    --px-theme-text: #ffe4d4 !important; /* Soft peach for text to bring out skin tones */
-    --px-bg: #1d1a1a !important; /* Deep, dark charcoal for background, adding contrast */
-    --px-text: #e1d2ce !important; /* Light muted beige for easy readability */
-    --px-gray-1: #353030 !important; /* Soft dark gray for depth */
-    --px-gray-2: #403737 !important; /* Slightly warmer gray for blending with skin */
-    --px-gray-3: #483d3d !important; /* Subtle brown-gray to match the natural tones */
-    --px-gray-4: #524444 !important; /* Balanced neutral gray */
-    --px-gray-5: #6c5a5a !important; /* Muted warm tone for a more comforting feel */
-    --px-border: #7e6d6d !important; /* Gentle medium brown for soft borders */
-    --bs-heading-color: #f1e0da !important; /* Light beige for headings to stand out */
+    --px-theme: #e84b2f !important; /* Bright coral for a bold theme */
+    --px-theme-text: rgb(255, 255, 255) !important; /* White for high contrast text */
+    --px-bg: rgb(20, 20, 20) !important; /* Dark shade for the main background */
+    --px-text: rgb(153, 153, 153) !important; /* Light gray for readability */
+    --px-gray-1: rgb(0, 0, 0) !important; /* Pure black for depth */
+    --px-gray-2: rgb(20, 20, 20) !important; /* Dark gray for blending */
+    --px-gray-3: rgb(30, 30, 30) !important; /* Lighter gray for subtle contrast */
+    --px-gray-4: rgb(38, 38, 38) !important; /* Darker gray for balance */
+    --px-gray-5: rgb(0, 0, 0) !important; /* Black as a strong anchor */
+    --px-border: rgb(30, 30, 30) !important; /* Dark gray for borders */
+    --bs-heading-color: rgb(255, 255, 255) !important; /* White for standout headings */
 }
 
-/* Scrollbar styles for Webkit browsers */
+/* Scrollbar Styles for Webkit Browsers */
 ::-webkit-scrollbar {
     width: 12px;
-    background-color: var(--px-gray-1) !important;
+    background-color: var(--px-gray-2) !important;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -77,16 +77,16 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--px-gray-5) !important;
+    background-color: var(--px-theme) !important; /* Coral highlight on hover */
 }
 
-/* Scrollbar styles for Firefox */
+/* Scrollbar Styles for Firefox */
 html {
     scrollbar-width: thin !important; /* Thin scrollbar */
-    scrollbar-color: var(--px-gray-3) var(--px-gray-1) !important; /* Thumb and background */
+    scrollbar-color: var(--px-gray-3) var(--px-gray-2) !important; /* Thumb and background colors */
 }
 
-/* Hide scrollbar on small screens */
+/* Hide Scrollbar on Small Screens */
 @media (max-width: 768px) {
     ::-webkit-scrollbar {
         width: 0px !important;
